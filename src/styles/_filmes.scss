@@ -1,0 +1,27 @@
+@use 'variaveis';
+
+.lista {
+    &__container {
+        padding: 5.6vw;
+        min-height: 80vh;
+    }
+
+    &__text {
+        color: variaveis.$corTextoPrincipal;
+        margin: 24px 0 24px;
+    }
+    
+    &__conteudo {
+        color: variaveis.$corTextoSecundario;
+        list-style: none;
+
+        &__sobre {
+            margin: 24px;
+        }
+    }
+}
+
+hr {
+    margin: 11px 0;
+    width: 90%;
+}

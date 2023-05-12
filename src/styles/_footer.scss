@@ -1,0 +1,16 @@
+@use 'variaveis';
+.copy{
+    background-color: variaveis.$corTextoSecundario;
+    text-align: center;
+
+
+    &__logo {
+        margin: 24px;
+        max-width: 10%;
+
+        @media (max-width: 768px) {
+            max-width: 30%;
+            margin: 18px;
+        }
+    }
+}

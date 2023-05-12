@@ -1,0 +1,19 @@
+@use 'variaveis';
+
+.sobre {
+    &__container{
+        padding: 5.6vw;
+        min-height: 80vh;
+        text-align: inherit;
+    }
+
+    &__conteudo{
+        color: variaveis.$corTextoSecundario;
+    }
+
+    &__text{
+        color: variaveis.$corTextoPrincipal;
+        margin: 20px 0 20px;
+    }
+
+}

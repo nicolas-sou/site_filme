@@ -1,0 +1,54 @@
+@use 'hero';
+@use 'variaveis';
+@use 'sobre';
+@use 'filmes';
+@use 'carros';
+@use 'footer';
+
+@font-face {
+    font-family: Avenir;
+    src:url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src:url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+}
+
+body {
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text($fontSize: 16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+}
+
+.title--big {
+    @include title(30px);
+
+    @media (max-width: 768px) {
+        @include title(26px)
+    }
+}
+
+.text {
+    @include text;
+
+    @media (max-width: 768px) {
+        @include text(14px)
+    }
+}
